@@ -31,6 +31,8 @@ r["sell"], r["cash"], r["voucher"]    # (60.0, 26.0, 37.0)
 r["price_move"]                       # 'CeX raised it £55 → £60 on 29 Aug 2026'
 ```
 
+**Write-up:** [CeX offered £136 cash for my £30 Pi case. It was quoting a different product.](https://dev.to/c1-anderson/cex-offered-ps136-cash-for-my-ps30-pi-case-it-was-quoting-a-different-product-55j0) on dev.to.
+
 Not affiliated with CeX. Read the [etiquette](#etiquette-and-terms) section before you point this at anything.
 
 ---
