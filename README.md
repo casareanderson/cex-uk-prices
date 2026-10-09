@@ -207,3 +207,5 @@ Working as of **2026-10-08**: the live lookup in the screenshot above returned 6
 MIT, see [LICENSE](LICENSE).
 
 Price and stock data belong to CeX and come from its public search, which runs on Algolia. Extracted from a private eBay listing tool, where CeX's cash price is the one number that isn't an opinion: a standing offer to buy the item today, so it works as a floor under an asking price and as the answer to "trade it in, or list it?".
+
+If this is useful to you, [buy me a coffee](https://buymeacoffee.com/iamc_tech) ☕
