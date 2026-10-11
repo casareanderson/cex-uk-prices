@@ -1,0 +1,50 @@
+name: setup-check
+
+# Proves docs/SETUP.md still works from a fresh clone. The weekly run also makes ONE live lookup
+# against CeX's public search, so a change at CeX's end turns this red. Only the schedule and a
+# manual run in this repository do that: never pull requests, never forks.
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "47 6 * * 1"
+  push:
+    paths:
+      - "docs/SETUP.md"
+      - "scripts/**"
+      - "cexuk/**"
+      - "tests/**"
+      - ".github/workflows/setup-check.yml"
+  pull_request:
+    paths:
+      - "docs/SETUP.md"
+      - "scripts/**"
+      - "cexuk/**"
+      - "tests/**"
+
+permissions:
+  contents: read
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.10", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: bash scripts/setup-check.sh
+
+  live:
+    # one polite request a week, from this repository only
+    if: github.repository == 'casareanderson/cex-uk-prices' && (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: CEXUK_LIVE=1 bash scripts/setup-check.sh

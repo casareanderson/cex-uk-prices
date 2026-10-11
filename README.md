@@ -44,6 +44,8 @@ Write-up on dev.to: [CeX offered £136 cash for my £30 Pi case. It was quoting 
 
 ## Quick start
 
+Full step-by-step guide, tested on a fresh machine every week: [docs/SETUP.md](docs/SETUP.md).
+
 You need Python 3.10 or newer. There is nothing to install.
 
 ```bash
