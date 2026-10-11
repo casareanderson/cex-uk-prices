@@ -7,6 +7,7 @@ CeX UK retail and trade-in prices from Python: what CeX **sells** an item for, w
 [![Licence: MIT](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
 ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)
 ![Dependencies: none](https://img.shields.io/badge/dependencies-none-green.svg)
+[![Buy Me a Coffee](https://raw.githubusercontent.com/casareanderson/.github/main/badges/bmc-yellow.svg)](https://buymeacoffee.com/iamc_tech)
 
 Standard library only. No key, no account, no browser. Not affiliated with CeX; read [Etiquette and terms](#etiquette-and-terms) before you point this at anything.
 
